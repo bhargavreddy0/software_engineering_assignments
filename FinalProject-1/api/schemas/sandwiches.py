@@ -20,5 +20,6 @@ class SandwichUpdate(BaseModel):
 class Sandwich(SandwichBase):
     id: int
 
-    class ConfigDict:
-        from_attributes = True
+
+    class Config:
+        orm_mode = True

@@ -23,5 +23,6 @@ class OrderDetail(OrderDetailBase):
     order_id: int
     sandwich: Sandwich = None
 
-    class ConfigDict:
-        from_attributes = True
+
+    class Config:
+        orm_mode = True

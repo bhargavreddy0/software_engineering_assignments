@@ -24,5 +24,6 @@ class Order(OrderBase):
     order_date: Optional[datetime] = None
     order_details: list[OrderDetail] = None
 
-    class ConfigDict:
-        from_attributes = True
+
+    class Config:
+        orm_mode = True
